@@ -1,0 +1,12 @@
+server:
+  port: 7000
+
+
+#logging:
+  #config: classpath:log4j2-asyn.xml
+registry:
+  address: 127.0.0.1:2181
+
+netty:
+  server:
+    address: 127.0.0.1:17000
