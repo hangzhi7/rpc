@@ -2,7 +2,7 @@
 # simple-rpc
 
 ## 项目介绍
-简单实现rpc的服务端和客户端
+简单手写实现rpc的服务端和客户端
 
 ## 结构
 ```text
@@ -21,7 +21,7 @@ simple-rpc
 # netty-rpc
 
 #### 项目介绍
-简单的RPC ,基于netty实现和基于socket实现 
+简单RPC ,基于netty实现和基于socket实现 
 
 #### 技术
 
