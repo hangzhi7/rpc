@@ -1,7 +1,7 @@
 package com.hh.rpc.server;
 
-import com.demo.nettyrpc.util.rpc.NettyRpcResponse;
-import com.demo.nettyrpc.util.rpc.NettyRpcRequest;
+import com.hh.rpc.util.rpc.NettyRpcRequest;
+import com.hh.rpc.util.rpc.NettyRpcResponse;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;

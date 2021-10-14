@@ -1,7 +1,7 @@
 package com.hh.rpc.client;
 
-import com.demo.nettyrpc.util.rpc.NettyRpcRequest;
-import com.demo.nettyrpc.util.rpc.NettyRpcResponse;
+import com.hh.rpc.util.rpc.NettyRpcRequest;
+import com.hh.rpc.util.rpc.NettyRpcResponse;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.*;
 import lombok.extern.slf4j.Slf4j;

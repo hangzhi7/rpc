@@ -1,8 +1,8 @@
 package com.hh.rpc.service.impl;
 
-import com.demo.nettyrpc.model.User;
+import com.hh.rpc.model.User;
 import com.hh.rpc.server.NettyRpcService;
-import com.demo.nettyrpc.service.HelloService;
+import com.hh.rpc.service.HelloService;
 
 @NettyRpcService(HelloService.class)
 public class HelloServiceImpl implements HelloService {

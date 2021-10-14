@@ -3,26 +3,22 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.demo.nettyrpc</groupId>
+	<parent>
+		<groupId>com.hh.rpc</groupId>
+		<artifactId>netty-rpc</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
 	<artifactId>netty-rpc-client</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>netty-rpc-client</name>
-	<description>Demo project for Spring Boot</description>
-
-	<parent>
-		<groupId>com.demo.rpc</groupId>
-		<artifactId>netty-rpc</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>..</relativePath>
-	</parent>
+	<description>客户端</description>
 
 	<dependencies>
 		<dependency>
-			<groupId>com.demo</groupId>
+			<groupId>com.hh.rpc</groupId>
 			<artifactId>rpc-common</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

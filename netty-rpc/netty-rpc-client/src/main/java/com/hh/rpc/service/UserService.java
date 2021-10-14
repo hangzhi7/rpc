@@ -3,8 +3,7 @@ package com.hh.rpc.service;
 import com.hh.rpc.client.NettyRpcClient;
 import com.hh.rpc.client.NettyRpcFuture;
 import com.hh.rpc.client.proxy.IAsyncObjectProxy;
-import com.demo.nettyrpc.model.User;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.hh.rpc.model.User;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.ExecutionException;

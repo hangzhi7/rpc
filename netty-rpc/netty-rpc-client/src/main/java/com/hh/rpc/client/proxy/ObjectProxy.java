@@ -3,7 +3,7 @@ package com.hh.rpc.client.proxy;
 import com.hh.rpc.client.ConnectManage;
 import com.hh.rpc.client.NettyRpcClientHandler;
 import com.hh.rpc.client.NettyRpcFuture;
-import com.demo.nettyrpc.util.rpc.NettyRpcRequest;
+import com.hh.rpc.util.rpc.NettyRpcRequest;
 import lombok.extern.slf4j.Slf4j;
 
 import java.lang.reflect.InvocationHandler;

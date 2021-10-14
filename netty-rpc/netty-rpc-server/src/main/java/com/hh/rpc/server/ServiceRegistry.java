@@ -1,6 +1,6 @@
 package com.hh.rpc.server;
 
-import com.demo.nettyrpc.util.Constant;
+import com.hh.rpc.util.Constant;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.zookeeper.*;
 import org.apache.zookeeper.data.Stat;

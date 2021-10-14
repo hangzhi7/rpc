@@ -3,20 +3,19 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.demo</groupId>
+	<parent>
+		<groupId>com.hh.rpc</groupId>
+		<artifactId>netty-rpc</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
 	<artifactId>rpc-common</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>rpc-common</name>
-	<description>Demo project for Spring Boot</description>
+	<description>公共包</description>
 
-	<parent>
-		<groupId>com.demo.rpc</groupId>
-		<artifactId>netty-rpc</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>..</relativePath>
-	</parent>
+
 
 	<dependencies>
 		<dependency>

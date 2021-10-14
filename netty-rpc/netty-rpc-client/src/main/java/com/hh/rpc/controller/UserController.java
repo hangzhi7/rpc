@@ -1,6 +1,6 @@
 package com.hh.rpc.controller;
 
-import com.demo.nettyrpc.model.User;
+import com.hh.rpc.model.User;
 import com.hh.rpc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
