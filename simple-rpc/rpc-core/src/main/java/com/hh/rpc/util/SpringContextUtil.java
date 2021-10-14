@@ -1,4 +1,4 @@
-package com.hh.rpc.utils;
+package com.hh.rpc.util;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
@@ -13,11 +13,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class SpringContextUtil implements ApplicationContextAware {
+
     private static ApplicationContext context;
 
     @Override
-    public void setApplicationContext(ApplicationContext contex)
-            throws BeansException {
+    public void setApplicationContext(ApplicationContext contex) throws BeansException {
         SpringContextUtil.context = contex;
     }
 

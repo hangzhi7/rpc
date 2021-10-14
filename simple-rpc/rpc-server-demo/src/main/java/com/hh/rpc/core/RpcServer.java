@@ -1,6 +1,8 @@
 package com.hh.rpc.core;
 
-import com.hh.rpc.utils.SpringContextUtil;
+import com.hh.rpc.util.MultiThreadPool;
+import com.hh.rpc.util.SpringContextUtil;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +14,7 @@ import java.util.List;
  */
 
 public class RpcServer {
+
     private String[] serviceNames;
 
     public RpcServer(String[] serviceNames) {
@@ -19,13 +22,14 @@ public class RpcServer {
     }
 
     public void init() throws Exception {
-        List<Object> objectList =new ArrayList<>();
+        List<Object> objectList = new ArrayList<>();
         for (String serviceName : serviceNames) {
             Object bean = SpringContextUtil.getBean(serviceName);
             objectList.add(bean);
         }
+        ThreadPoolTaskExecutor instance = MultiThreadPool.getInstance();
         Object[] objects = objectList.toArray();
-        RpcFramework.export(objects, 18888);
+        RpcFramework.export(instance,objects, 18888);
     }
 
 }

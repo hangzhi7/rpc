@@ -11,12 +11,4 @@
 	<name>rpc-service</name>
 	<description>rpc 提供服务</description>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.16.20</version>
-		</dependency>
-	</dependencies>
-
 </project>

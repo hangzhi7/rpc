@@ -9,6 +9,7 @@
 simple-rpc
 |-- rpc-demo            客户端
 |-- rpc-server-demo     服务端
+|-- rpc-core            核心包
 |-- rpc-service         业务包
 
 ```

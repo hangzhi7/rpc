@@ -1,12 +1,14 @@
 package com.hh.rpc.core;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
+import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
@@ -78,4 +80,33 @@ public class RpcFramework {
                 });
     }
 
+    /**
+     * 暴露服务
+     *
+     * @param objects 服务实现
+     * @param port    服务端口
+     * @throws Exception
+     */
+    public static void export(ThreadPoolTaskExecutor executor,final Object[] objects, int port) throws Exception {
+        if (objects == null && objects.length > 0) {
+            throw new IllegalArgumentException("service instance == null");
+        }
+        if (port <= 0 || port > 65535) {
+            throw new IllegalArgumentException("Invalid port " + port);
+        }
+        for (Object service : objects) {
+            log.info("Export service " + service.getClass().getName() + " on port " + port);
+        }
+        //前面都是验证调用是否符合规则，这里在被调用端开一个服务。以下就是死循环执行。
+        ServerSocket server = new ServerSocket(port);
+        for (; ; ) {
+            try {
+                final Socket socket = server.accept();
+                RpcHandler rpcHandler = new RpcHandler(socket, objects);
+                executor.execute(rpcHandler);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }
