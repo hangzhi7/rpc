@@ -26,7 +26,8 @@ public class RpcAspect {
     @Around("providerService()")
     public Object doBasicProfiling(ProceedingJoinPoint pjp) throws Throwable {
         log.info("进入环绕通知");
-        Object object = pjp.proceed();//执行该方法
+        //执行该方法
+        Object object = pjp.proceed();
         log.info("退出方法");
         return object;
     }

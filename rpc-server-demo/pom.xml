@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>rpc-server-demo</name>
-	<description>Demo project for Spring Boot</description>
+	<description>rpc 服务端</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

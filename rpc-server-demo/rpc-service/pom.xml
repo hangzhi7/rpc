@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>rpc-service</name>
-	<description>Demo project for Spring Boot</description>
+	<description>rpc 提供服务</description>
 
 	<dependencies>
 		<dependency>
